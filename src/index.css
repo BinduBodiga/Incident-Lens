@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body { @apply bg-bg font-sans text-[13px] text-slate-200 antialiased; }
+  h1 { @apply text-xl font-semibold; }
+  button, input, select, textarea { font: inherit; }
+}
+
+@layer components {
+  .card { @apply rounded-lg border border-line bg-panel p-4; }
+  .label { @apply text-[11px] uppercase tracking-wider text-muted; }
+  .btn { @apply inline-flex items-center gap-1.5 rounded-md px-3.5 py-1.5 text-[13px] font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-400; }
+  .btn-primary { @apply bg-blue-600 text-white hover:bg-blue-700; }
+  .btn-ghost { @apply border border-line text-slate-200 hover:bg-white/5; }
+  .btn-success { @apply bg-green-700 text-white hover:bg-green-800; }
+  .input { @apply w-full rounded-md border border-line bg-bg px-2.5 py-1.5 text-slate-200 placeholder:text-muted focus:border-blue-500 focus:outline-none; }
+}
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+.fade-in { animation: fadeIn 0.3s ease-out; }
